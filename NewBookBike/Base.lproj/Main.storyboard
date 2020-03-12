@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ucp-RH-chZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewBookBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-uk-trD">
+                                <rect key="frame" x="40" y="650" width="334" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZq-5C-S3n">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5dC-Lv-ehc"/>
+                                        </constraints>
+                                        <state key="normal" title="SignUp"/>
+                                        <connections>
+                                            <segue destination="6Pc-Rx-l7d" kind="show" id="4VX-kv-tlG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWy-V9-e89">
+                                        <rect key="frame" x="0.0" y="60" width="334" height="112"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mZq-5C-S3n" firstAttribute="height" secondItem="OWy-V9-e89" secondAttribute="height" multiplier="0.357143" id="k8K-pd-ZUI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wxx-uk-trD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="606" id="VNf-RM-oAP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wxx-uk-trD" secondAttribute="bottom" constant="40" id="tHx-T7-gmk"/>
+                            <constraint firstItem="Wxx-uk-trD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="wtI-R2-TYt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wxx-uk-trD" secondAttribute="trailing" constant="40" id="xcJ-IH-XL5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lpf-3o-6Yl"/>
+                    <connections>
+                        <outlet property="LoginButton" destination="OWy-V9-e89" id="fdp-Db-WYC"/>
+                        <outlet property="signUpButton" destination="mZq-5C-S3n" id="CNo-Ir-Fei"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="LLM-IJ-a7K">
+            <objects>
+                <viewController id="oE2-Nb-xaZ" customClass="LoginViewController" customModule="NewBookBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9fx-dk-9uJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WEM-la-IF3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldP-nS-iQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="413"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dy5-rf-IHO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ucp-RH-chZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nfu-ip-ubg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8nh-IN-D59"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSQ-4T-aRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="w75-v6-m78">
+            <objects>
+                <viewController id="6Pc-Rx-l7d" customClass="SignUpViewController" customModule="NewBookBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kSa-v3-O2W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-3x-jE6">
+                                <rect key="frame" x="40" y="643.5" width="334" height="178.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lom-IT-m6L">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvG-S1-7bq">
+                                        <rect key="frame" x="0.0" y="54" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ju-rW-PCx">
+                                        <rect key="frame" x="0.0" y="108" width="334" height="30"/>
+                                        <state key="normal" title="Registrar"/>
+                                        <connections>
+                                            <action selector="signUpTap:" destination="6Pc-Rx-l7d" eventType="touchUpInside" id="t8e-5Y-CUV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zw-Gu-a9p">
+                                        <rect key="frame" x="0.0" y="158" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oq3-sF-Qbr" firstAttribute="bottom" secondItem="xd9-3x-jE6" secondAttribute="bottom" constant="40" id="1va-l6-yyn"/>
+                            <constraint firstItem="xd9-3x-jE6" firstAttribute="leading" secondItem="oq3-sF-Qbr" secondAttribute="leading" constant="40" id="Ddv-ws-rWF"/>
+                            <constraint firstItem="oq3-sF-Qbr" firstAttribute="trailing" secondItem="xd9-3x-jE6" secondAttribute="trailing" constant="40" id="nqa-dU-nqW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oq3-sF-Qbr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jst-yV-SYj"/>
+                    <connections>
+                        <outlet property="SignUpButton" destination="4ju-rW-PCx" id="G3W-2x-gl0"/>
+                        <outlet property="contrasenaTextField" destination="gvG-S1-7bq" id="Cc9-14-uQ2"/>
+                        <outlet property="emailTextField" destination="lom-IT-m6L" id="rPW-X1-cL3"/>
+                        <outlet property="errorLabel" destination="2zw-Gu-a9p" id="OSs-gs-3w6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C89-Wb-Xha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="-334"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="cOp-LE-Mmu">
+            <objects>
+                <viewController id="7Mo-Np-PxQ" customClass="HomeViewController" customModule="NewBookBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mqf-ri-H1T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wee-pc-s78">
+                                <rect key="frame" x="40" y="348" width="334" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, mundo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-vE-HtL">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wee-pc-s78" firstAttribute="leading" secondItem="N0A-KA-n4Q" secondAttribute="leading" constant="40" id="4Rs-dZ-f0X"/>
+                            <constraint firstItem="N0A-KA-n4Q" firstAttribute="trailing" secondItem="wee-pc-s78" secondAttribute="trailing" constant="40" id="bff-yP-kcG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N0A-KA-n4Q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLi-hK-rbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="115"/>
+        </scene>
+    </scenes>
+</document>
