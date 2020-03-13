@@ -15,62 +15,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-uk-trD">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-uk-trD">
                                 <rect key="frame" x="40" y="694" width="334" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZq-5C-S3n">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="128"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="5dC-Lv-ehc"/>
+                                            <constraint firstAttribute="height" constant="50" id="Dex-UP-IFB"/>
                                         </constraints>
-                                        <state key="normal" title="SignUp"/>
+                                        <state key="normal" title="No tienes una cuenta ¿Registrate?"/>
                                         <connections>
                                             <segue destination="6Pc-Rx-l7d" kind="show" id="4VX-kv-tlG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWy-V9-e89">
-                                        <rect key="frame" x="0.0" y="48.5" width="334" height="79.5"/>
-                                        <state key="normal" title="Login"/>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-6B-bLJ">
+                                <rect key="frame" x="172" y="220" width="70" height="70"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WiZ-Bm-Tmc">
+                                <rect key="frame" x="40" y="403.5" width="334" height="157.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uz-cp-VjW">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Skd-IJ-MXq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmW-lu-TrA">
+                                        <rect key="frame" x="0.0" y="60" width="334" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Wap-Fv-xIv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZi-V8-QaD">
+                                        <rect key="frame" x="0.0" y="107.5" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xVy-bj-7Sm"/>
+                                        </constraints>
+                                        <state key="normal" title="Iniciar Sesión"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWF-xN-9sb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="mZq-5C-S3n" firstAttribute="height" secondItem="OWy-V9-e89" secondAttribute="height" multiplier="0.357143" id="k8K-pd-ZUI"/>
-                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Bike" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-8D-NlW">
+                                <rect key="frame" x="152" y="336" width="111" height="18.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Wxx-uk-trD" firstAttribute="top" secondItem="WiZ-Bm-Tmc" secondAttribute="bottom" constant="43" id="6Eq-6G-52o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wxx-uk-trD" secondAttribute="trailing" constant="40" id="6x7-Bj-aBk"/>
+                            <constraint firstItem="o9L-8D-NlW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="7hc-ve-Jf5"/>
+                            <constraint firstItem="7I3-6B-bLJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="8N3-UA-oWW"/>
+                            <constraint firstItem="7I3-6B-bLJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="Ex6-vb-XBZ"/>
+                            <constraint firstItem="WiZ-Bm-Tmc" firstAttribute="top" secondItem="o9L-8D-NlW" secondAttribute="bottom" constant="35" id="Le2-RM-qsd"/>
+                            <constraint firstItem="WiZ-Bm-Tmc" firstAttribute="height" secondItem="o9L-8D-NlW" secondAttribute="height" multiplier="8.41379" id="NhM-rz-i72"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7I3-6B-bLJ" secondAttribute="trailing" constant="172" id="Pci-ne-k5f"/>
                             <constraint firstItem="Wxx-uk-trD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="606" id="VNf-RM-oAP"/>
+                            <constraint firstItem="Wxx-uk-trD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="dZj-p2-MBJ"/>
+                            <constraint firstItem="WiZ-Bm-Tmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="dxt-8I-w24"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7I3-6B-bLJ" secondAttribute="trailing" constant="172" id="gcW-WS-ELJ"/>
+                            <constraint firstItem="WiZ-Bm-Tmc" firstAttribute="top" secondItem="o9L-8D-NlW" secondAttribute="bottom" constant="49" id="hmt-44-GSC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9L-8D-NlW" secondAttribute="trailing" constant="151" id="ivI-RZ-FQ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WiZ-Bm-Tmc" secondAttribute="trailing" constant="40" id="kT9-C2-1Ob"/>
+                            <constraint firstItem="7I3-6B-bLJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="ope-So-xUN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wxx-uk-trD" secondAttribute="bottom" constant="40" id="puI-B3-gTh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wxx-uk-trD" secondAttribute="bottom" constant="40" id="tHx-T7-gmk"/>
+                            <constraint firstItem="o9L-8D-NlW" firstAttribute="top" secondItem="7I3-6B-bLJ" secondAttribute="bottom" constant="46" id="uFV-aN-0oV"/>
+                            <constraint firstItem="o9L-8D-NlW" firstAttribute="top" secondItem="7I3-6B-bLJ" secondAttribute="bottom" constant="46" id="vCk-Bc-WK4"/>
+                            <constraint firstItem="Wxx-uk-trD" firstAttribute="top" secondItem="7I3-6B-bLJ" secondAttribute="bottom" constant="404" id="vhD-ko-U8v"/>
                             <constraint firstItem="Wxx-uk-trD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="wtI-R2-TYt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wxx-uk-trD" secondAttribute="trailing" constant="40" id="xcJ-IH-XL5"/>
+                            <constraint firstItem="Wxx-uk-trD" firstAttribute="top" secondItem="WiZ-Bm-Tmc" secondAttribute="bottom" constant="133" id="xsB-0L-hUu"/>
+                            <constraint firstItem="7I3-6B-bLJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="yih-Vb-qgz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lpf-3o-6Yl"/>
                     <connections>
-                        <outlet property="LoginButton" destination="OWy-V9-e89" id="fdp-Db-WYC"/>
+                        <outlet property="emailTextField" destination="5uz-cp-VjW" id="SdR-jx-B9p"/>
+                        <outlet property="imageLogo" destination="7I3-6B-bLJ" id="3oV-zo-Rod"/>
+                        <outlet property="loginButton" destination="kZi-V8-QaD" id="7a4-uz-1H1"/>
+                        <outlet property="passwordTextField" destination="DmW-lu-TrA" id="an8-ZZ-6hF"/>
                         <outlet property="signUpButton" destination="mZq-5C-S3n" id="CNo-Ir-Fei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="LLM-IJ-a7K">
-            <objects>
-                <viewController id="oE2-Nb-xaZ" customClass="LoginViewController" customModule="NewBookBike" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9fx-dk-9uJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="WEM-la-IF3"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ldP-nS-iQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1864" y="413"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dy5-rf-IHO">
@@ -174,10 +216,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N0A-KA-n4Q"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vp1-z0-EP9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLi-hK-rbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="115"/>
+            <point key="canvasLocation" x="1864" y="466"/>
         </scene>
     </scenes>
 </document>
