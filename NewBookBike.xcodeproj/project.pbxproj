@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		239185B42418B3AF00627743 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239185B32418B3AF00627743 /* Utilities.swift */; };
 		239185B62418B3BF00627743 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239185B52418B3BF00627743 /* Constants.swift */; };
 		239185B92418B67300627743 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 239185B82418B67300627743 /* GoogleService-Info.plist */; };
+		23E2BEE9241B4C7500FF8899 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E2BEE8241B4C7500FF8899 /* ColorExt.swift */; };
 		B691852FE818E44F8C27D3CF /* Pods_NewBookBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF51CEFF57C0B609A052ADF3 /* Pods_NewBookBike.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		239185B32418B3AF00627743 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		239185B52418B3BF00627743 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		239185B82418B67300627743 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23E2BEE8241B4C7500FF8899 /* ColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		27CB8C520538EABE98E8A413 /* Pods-NewBookBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewBookBike.release.xcconfig"; path = "Target Support Files/Pods-NewBookBike/Pods-NewBookBike.release.xcconfig"; sourceTree = "<group>"; };
 		3743C1356B64B86E1286AFB4 /* Pods-NewBookBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewBookBike.debug.xcconfig"; path = "Target Support Files/Pods-NewBookBike/Pods-NewBookBike.debug.xcconfig"; sourceTree = "<group>"; };
 		AF51CEFF57C0B609A052ADF3 /* Pods_NewBookBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewBookBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 		239185B72418B3C900627743 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				23E2BEE8241B4C7500FF8899 /* ColorExt.swift */,
 				239185B52418B3BF00627743 /* Constants.swift */,
 				239185B32418B3AF00627743 /* Utilities.swift */,
 			);
@@ -114,7 +117,6 @@
 				3743C1356B64B86E1286AFB4 /* Pods-NewBookBike.debug.xcconfig */,
 				27CB8C520538EABE98E8A413 /* Pods-NewBookBike.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2391859D2418AC2600627743 /* ViewController.swift in Sources */,
+				23E2BEE9241B4C7500FF8899 /* ColorExt.swift in Sources */,
 				239185992418AC2600627743 /* AppDelegate.swift in Sources */,
 				239185B42418B3AF00627743 /* Utilities.swift in Sources */,
 				239185AD2418AC8A00627743 /* SignUpViewController.swift in Sources */,

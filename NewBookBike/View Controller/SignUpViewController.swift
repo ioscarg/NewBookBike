@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
-import FirebaseFirestore
+//import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
     
@@ -30,25 +30,75 @@ class SignUpViewController: UIViewController {
         Utilities.styleFilledButton(SignUpButton)
     }
     
+    func validateFields() -> String?
+       {
+           //Verificar que los campos no esten vacios
+           
+           if  emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+               contrasenaTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+           {
+               return "Por favor ingresa informacion"
+           }
+           
+           //Verificar que la contraseña es segura
+           
+           let cleanedPassword = contrasenaTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+           
+           if Utilities.isPasswordValid(cleanedPassword) == false {
+               
+               return "Verificar que el tamaño sea de 8 y tenga caracteres especiales"
+           }
+           
+           return nil
+       }
+    
     @IBAction func signUpTap(_ sender: Any) {
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = contrasenaTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        Auth.auth().createUser(withEmail: email, password: password){
-            (result, err) in
-            if err != nil {
-                self.showError("Error en crear el usuario")
-            }else {
-                let db = Firestore.firestore()
-                db.collection("usuarios").addDocument(data: ["correo":email, "contraseña":password, "uid":result!.user.uid]){
-                    (error) in
-                    if error != nil {
-                        self.showError("No se pudo crear el usuario en la base de datos")
+        let error = validateFields()
+        
+        if error != nil{
+            //Ocurrio un error y se tiene que mostrar el mensaje
+            showError(error!)
+            
+        }else{
+            
+            //Crear una version limpia de los datos
+            
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let password = contrasenaTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                // verificar errores
+                if err != nil {
+                    
+                    //Ocurrio un error al crear el usuario
+                    self.showError("Error creando al usuario")
+                    
+                    
+                }else{
+                    //El usuario se creo bien
+                    
+                    let db = Firestore.firestore()
+                    
+                    
+                    db.collection("usuarios").addDocument(data: ["email":email,"password": password, "uid": result!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showError("No se pudo crear el usuario en la base de datos")
+                        }
                     }
+                    
+                    //Transicion a menu principal
+                    self.transitionToHome()
                 }
-                self.transitionToHome()
+                
             }
+            //Crear al usuario
         }
+        
+        //Crear al usuario
+        
+        //Navegacion
     }
     
     func showError(_ message:String){
